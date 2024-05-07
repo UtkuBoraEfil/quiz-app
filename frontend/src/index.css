@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+  .font-rubik{
+    font-family: 'Rubik', sans-serif;
+  }
+  .headingL{
+    font-size: 4rem;
+    font-weight: 100;
+    font-family: Rubik, sans-serif;
+    color:#313E51;
+    line-height: 100%;
+
+  }
+  .headingLbold{
+    font-size: 4rem;
+    font-weight: 500;
+    font-family: Rubik, sans-serif;
+    color:#313E51;
+    line-height: 100%;
+  }
+  .headingM{
+    font-size: 2.5rem;
+    font-family: Rubik, sans-serif;
+    color:#313E51;
+    line-height: 100%;
+  }
+  .headingS{
+    font-size: 28px;
+    font-weight: 500;
+    font-family: Rubik, sans-serif;
+    color:#313E51;
+    line-height: 100%;
+  }
+  .bodyM{
+    font-size: 0.8rem;
+    font-weight: 100;
+    font-family: Rubik, sans-serif;
+    color:#313E51;
+    line-height: 150%;
+  }
+  .bodyS{
+    font-size: 0.8rem;
+    font-weight: 100;
+    font-family: Rubik, sans-serif;
+    line-height: 150%;
+    font-style: italic;
+    color:#313E51;
+  }
+}
+
