@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -29,8 +30,11 @@ export default {
         }
     },
     backgroundImage: {
+        'white-circles': "url('./assets/images/white-circles.svg')",
         'circles': "url('./assets/images/background.svg')",
+        'dark-circles': "url('./assets/images/dark-circles.svg')",
       },
+
   },
   plugins: [],
 }

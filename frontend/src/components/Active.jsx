@@ -3,27 +3,25 @@ import accessibility from "../assets/images/accessibility.png";
 import css from "../assets/images/css.png";
 import html from "../assets/images/html.png";
 import javascript from "../assets/images/javascript.png";
-function Button({ onClick, png, content }) {
+
+function Active({ current }) {
   return (
-    <button
-      className="flex w-full bg-white  dark:bg-blue  mb-8 py-3 px-3 border-0 rounded-xl gap-6 shadow-sm hover:-translate-y-1 hover:scale-105"
-      onClick={onClick}
-    >
+    <div className="flex gap-3">
       <img
         className=" w-11 h-11"
         src={
-          png === "html"
+          current === "HTML"
             ? html
-            : png === "css"
+            : current === "CSS"
             ? css
-            : png === "accessibility"
+            : current === "ACCESSIBILITY"
             ? accessibility
             : javascript
         }
         alt=""
       />
-      <div className=" headingS dark:dark-text pt-2">{content}</div>
-    </button>
+      <h1 className="headingS dark:dark-text inline-flex items-center">{current}</h1>
+    </div>
   );
 }
-export default Button;
+export default Active;
