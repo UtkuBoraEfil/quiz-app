@@ -27,6 +27,13 @@
     color:#313E51;
     line-height: 100%;
   }
+  .result{
+    font-size: 8rem;
+    font-weight: 500;
+    color: #313E51;
+    font-family: Rubik, sans-serif;
+    line-height: 100%;
+  }
   .headingM{
     font-size: 2.5rem;
     font-family: Rubik, sans-serif;
@@ -64,6 +71,61 @@
     @apply transition-colors ease-in-out duration-500;
     transition: background-color 0.5s ease-in-out;
 }
+  .click{
+    border: #A729F5 2px solid;
+  }
+  .clickOption{
+    background-color: #A729F5;
+  }
+  .true{
+    border: #26D782 2px solid;
+  }
+  .false{
+    border: #EE5454 2px solid;
+  }
+  .trueOption{
+    background-color: #26D782;
+  }
+  .falseOption{
+    background-color: #EE5454;
+  }
+
+
+
+  @media(max-width: 980px){
+    .headingL{
+      font-size: 3rem;
+    }
+    .headingS{
+      font-size: 1.5rem;
+    }
+    .headingM{
+      font-size: 2.5rem;
+    } 
+    .bodyM{
+      font-size: 0.7rem;
+    }
+    .bodyS{
+      font-size: 0.7rem;
+    }
+  }
+  @media(max-width: 610px){
+    .headingL{
+      font-size: 2.5rem;
+    }
+    .headingM{
+      font-size: 2rem;
+    }
+    .headingS{
+      font-size: 1.5rem;
+    }
+    .bodyM{
+      font-size: 0.5rem;
+    }
+    .bodyS{
+      font-size: 0.5rem;
+    }
+  }
 
 }
 

@@ -7,9 +7,9 @@ export default {
   ],
   theme: {
     screens: {
-      'xl': '144px',
-      'lg': '64px',
-      'md': '36px',
+      'xl': '1185px',
+      'lg': '735px',
+      'md': '600px',
       'sm': '28px',
     },
     colors: {

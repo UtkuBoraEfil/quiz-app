@@ -4,14 +4,19 @@ import Button from "./components/Button";
 import MainScreen from "./components/MainScreen";
 import Questions from "./components/Questions";
 import Active from "./components/Active";
+import Result from "./components/Result";
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme"));
   const [active, setActive] = useState(localStorage.getItem("active"));
 
+
+
+
   function changeActive(value) {
     setActive(value);
   }
+
 
   useEffect(() => {
     if (theme === "dark") {
@@ -47,8 +52,8 @@ function App() {
 
   return (
     <>
-      <div className=" bg-light-grey  w-full h-screen bg-white-circles  dark:bg-dark-blue  dark:bg-dark-circles">
-        <div className="flex flex-row-reverse justify-between px-40 py-24">
+      <div className=" bg-light-grey  w-full h-screen bg-white-circles  dark:bg-dark-blue  dark:bg-dark-circles ">
+        <div className="flex flex-row-reverse justify-between xl:px-40 lg:px-14 md:px-20 px-5 xl:py-24 lg:py-14 py-10 ">
           <div className=" gap-3 inline-flex items-center">
             <svg
               className="cursor-pointer"
@@ -87,20 +92,13 @@ function App() {
               />
             </svg>
           </div>
-          {active !== "main" && <Active current={active} />}
+          {active !== "main" && <Active current={localStorage.getItem("active")} />}
         </div> 
-        <div className="flex mx-40 gap-6 ">
+        <div className="flex lg:flex-row xl:mx-40 lg:mx-14 md:mx-20 px-5 xl:gap-6 flex-col md:gap-8 gap-6">
           {active === "main" && <MainScreen changeActive={changeActive} />}
-          {active !== "main" && <Questions changeActive={changeActive} current={active} />}
+          {active !== "main"&& active!== "result" && <Questions changeActive={changeActive} current={active} />}
+          {active === "result" && <Result changeActive={changeActive} current={active}/>}
         </div>
-        {active !== "main" &&       <button
-        className=" bg-white  dark:bg-blue  mb-8 py-3 px-3 border-0 rounded-xl gap-6 shadow-sm hover:-translate-y-1 hover:scale-105"
-        onClick={() => {
-          changeActive("main");
-        }}
-      >
-        <p className=" bodyS dark:dark-text pt-2">turn back</p>
-      </button>} 
       </div>
     </>
   );
